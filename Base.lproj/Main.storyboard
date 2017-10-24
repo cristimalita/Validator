@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dz5-mS-HKe">
+                                <rect key="frame" x="16" y="151" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f4a-Id-0wn">
+                                <rect key="frame" x="16" y="53" width="343" height="29"/>
+                                <segments>
+                                    <segment title="CNP"/>
+                                    <segment title="CIF"/>
+                                    <segment title="IBAN"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changedSegment:" destination="vXZ-lx-hvc" eventType="valueChanged" id="usK-n8-hhD"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNS-SQ-ExK">
+                                <rect key="frame" x="16" y="204" width="343" height="52"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="cO2-EV-0Kt"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Validează">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="validate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="B4E-U7-mFn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2I-Ss-B3p">
+                                <rect key="frame" x="58" y="107" width="298" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="lzd-EZ-sE6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dv7-SY-3XG">
+                                <rect key="frame" x="16" y="106" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="1h5-lU-egR"/>
+                                    <constraint firstAttribute="width" constant="32" id="AIv-eq-HST"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f4a-Id-0wn" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="0q1-fl-L93"/>
+                            <constraint firstItem="dz5-mS-HKe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="5Ma-fg-jsC"/>
+                            <constraint firstItem="Dv7-SY-3XG" firstAttribute="top" secondItem="f4a-Id-0wn" secondAttribute="bottom" constant="25" id="8uP-pK-979"/>
+                            <constraint firstItem="c2I-Ss-B3p" firstAttribute="top" secondItem="f4a-Id-0wn" secondAttribute="bottom" constant="26" id="AGK-qo-o76"/>
+                            <constraint firstItem="vNS-SQ-ExK" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="D0U-rA-6lT"/>
+                            <constraint firstItem="Dv7-SY-3XG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="MyI-Wh-B8T"/>
+                            <constraint firstItem="f4a-Id-0wn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Ndv-sN-5AL"/>
+                            <constraint firstItem="vNS-SQ-ExK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Tgg-yw-TMc"/>
+                            <constraint firstItem="dz5-mS-HKe" firstAttribute="top" secondItem="c2I-Ss-B3p" secondAttribute="bottom" constant="15" id="aIl-Fv-WTx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c2I-Ss-B3p" secondAttribute="trailing" constant="3" id="b8u-Er-ruA"/>
+                            <constraint firstItem="vNS-SQ-ExK" firstAttribute="top" secondItem="dz5-mS-HKe" secondAttribute="bottom" constant="23" id="fLs-bD-bjy"/>
+                            <constraint firstItem="dz5-mS-HKe" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="fbM-nc-pdV"/>
+                            <constraint firstItem="f4a-Id-0wn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="33" id="jDK-S4-IxY"/>
+                            <constraint firstItem="c2I-Ss-B3p" firstAttribute="leading" secondItem="Dv7-SY-3XG" secondAttribute="trailing" constant="10" id="yhd-SB-s8l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="c2I-Ss-B3p" id="cTn-Qp-kae"/>
+                        <outlet property="segment" destination="f4a-Id-0wn" id="h8D-PT-ePZ"/>
+                        <outlet property="textField" destination="dz5-mS-HKe" id="xKS-Qx-Jhb"/>
+                        <outlet property="validImage" destination="Dv7-SY-3XG" id="DDR-OM-E4w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="395"/>
+        </scene>
+    </scenes>
+</document>
